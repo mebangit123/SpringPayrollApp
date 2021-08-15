@@ -62,7 +62,7 @@ public class EmployeePayrollController {
 	public ResponseEntity<ResponseDTO> updateEmployeePayrollData(@PathVariable("empId") int empId, @Valid @RequestBody EmployeePayrollDTO empPayrollDTO) {
 		EmployeePayrollData empData = null;
 		empData = employeePayrollService.updateEmployeePayrollData(empId, empPayrollDTO);
-		ResponseDTO respDTO = new ResponseDTO("Created Employee Payroll Data for: ", empData);
+		ResponseDTO respDTO = new ResponseDTO("Updated Employee Payroll Data for: ", empData);
 		return new ResponseEntity<ResponseDTO>(respDTO, HttpStatus.OK);
 	}
 	
